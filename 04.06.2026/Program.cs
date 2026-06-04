@@ -2,7 +2,8 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        //Task1
+        /*static void Main(string[] args)
         {
             int[] A = new int[5];
             float[,] B = new float[3, 4];
@@ -99,9 +100,146 @@
             Console.WriteLine($"\nProduct of all elements: {product}");
             Console.WriteLine($"\nSum of even elements in array A: {sum_of_even_arrA}");
             Console.WriteLine($"\nSum of elements in even columns of array B: {sum_add_columns_arrB:F2}");
+        }*/
+
+        //Task2
+        /*static void Main(string[] args)
+        {
+            int[,] B = new int[5, 5];
+            
+            int minPos = 0;
+            int maxPos = 0;
+            int counter = 0;
+            int sum = 0;
+            Random Rnum = new Random();
+
+            for (int i = 0; i < B.GetLength(0); i++)
+            {
+                for (int j = 0; j < B.GetLength(1); j++)
+                {
+                    B[i, j] = (int)Rnum.Next(-100,101);
+                }
+            }
+
+
+            int minEll = B[0, 0];
+            int maxEll = B[0, 0];
 
 
 
-        }
+            for (int i = 0; i < B.GetLength(0); i++)
+            {
+                for (int j = 0; j < B.GetLength(1); j++)
+                {
+                    if (B[i, j] < minEll)
+                    {
+                        minEll = B[i, j];
+                        minPos = counter;
+                    }
+                    if (B[i, j] > maxEll)
+                    {
+                        maxEll = B[i, j];
+                        maxPos = counter;
+                    }
+                    counter++;
+                }
+            }
+            counter = 0;
+            for (int i = 0; i < B.GetLength(0); i++)
+            {
+                for (int j = 0; j < B.GetLength(1); j++)
+                {
+                    if ((minPos < counter) && (counter < maxPos)||
+                        (maxPos < counter) && (counter < minPos))
+                    {
+                        sum += B[i, j];
+                    }
+                    counter++;
+                }
+            }
+
+            Console.WriteLine("\nArray B: ");
+            for (int i = 0; i < B.GetLength(0); i++)
+            {
+                for (int j = 0; j < B.GetLength(1); j++)
+                {
+                    Console.Write($"{B[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine($"\nSum of elements between min {minEll} and max {maxEll} is: {sum}");
+
+        }*/
+
+        //Task4
+        /*static void Main(string[] args)
+        { 
+            int[,]C = { {1, 2},
+                    {3, 4} };
+            int[,]D = { {6, 3},
+                    {9, 1} };
+            int[,] E = new int[C.GetLength(0), D.GetLength(1)];
+
+            Console.WriteLine("Original array C: ");
+            for (int i = 0; i < C.GetLength(0); i++)
+            {
+                for (int j = 0; j < C.GetLength(1); j++)
+                {
+                    Console.Write($"{C[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("Original array D: ");
+            for (int i = 0; i < D.GetLength(0); i++)
+            {
+                for (int j = 0; j < D.GetLength(1); j++)
+                {
+                    Console.Write($"{D[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Array C after * 4: ");
+
+            for (int i = 0; i < C.GetLength(0); i++)
+            {
+                for (int j = 0; j < C.GetLength(1); j++)
+                {
+                    Console.Write($"{C[i, j]*4}\t");
+                }
+                Console.WriteLine();
+            }
+
+
+            Console.WriteLine("Array C after addition array D: ");
+            for (int i = 0; i < C.GetLength(0); i++)
+            {
+                for (int j = 0; j < C.GetLength(1); j++)
+                {
+                    Console.Write($"{C[i, j] + D[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Product of arrays C and D: ");
+
+            for (int i = 0; i < E.GetLength(0); i++)
+            {
+                for (int j = 0; j < E.GetLength(1); j++)
+                {
+                    E[i, j] = 0;
+                    for (int k = 0; k < C.GetLength(1); k++)
+                    {
+                        E[i, j] += C[i, k] * D[k, j];
+                    }
+                    Console.Write($"{E[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+
+        }*/
+
+
+        
     }
 }
