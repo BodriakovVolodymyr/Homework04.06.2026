@@ -310,5 +310,35 @@
             }
             Console.WriteLine($"Result: {res}");
         }*/
+
+        //Task6
+
+        /*static void Main(string[] args)
+        {
+            Console.WriteLine("Enter some text:");
+            string text = Console.ReadLine();
+            string result = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (i == 0)
+                {
+                    result += char.ToUpper(text[i]);
+                }
+                else if (text[i - 1] == '.')
+                {
+                    result += char.ToUpper(text[i]);
+                }
+                else
+                {
+                    result += text[i];
+                }
+            }
+            Console.WriteLine(result);
+        
+        
+        
+        }*/
+
+
     }
 }
