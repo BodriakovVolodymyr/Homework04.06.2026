@@ -265,5 +265,50 @@
         }*/
 
         //Task5
+        /*static void Main(string[] args)
+        {
+            Console.WriteLine("Enter some text:");
+            char[]? text = Console.ReadLine().ToCharArray();
+
+            int res = 0;
+            int num = 0;
+            char operation = '+';
+
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (char.IsDigit(text[i]))
+                {
+                    num = num * 10 + (text[i] - '0');
+                }
+                if (text[i] == '+' || text[i] == '-')
+                {
+                    if (operation == '+')
+                    {
+                        res += num;
+                    }
+                    else
+                    {
+                        res -= num;
+                    }
+
+                    operation = text[i];
+                    num = 0;
+                }
+
+
+            }
+            if (operation == '+')
+            {
+                res += num;
+                num = 0;
+            }
+            if (operation == '-')
+            {
+                res -= num;
+                num = 0;
+            }
+            Console.WriteLine($"Result: {res}");
+        }*/
     }
 }
